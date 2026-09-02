@@ -1,0 +1,199 @@
+/* =====================================================================
+   MEDITRACK - Global Stylesheet
+   Theme: Light sky blue & white
+   This file is shared by every module. Module-specific tweaks go in
+   their own small <style> block or a dedicated file if they grow large.
+   ===================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eaf6fb;
+    color: #1f2d3d;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    color: #0b7bb8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------------
+   Login page layout
+   --------------------------------------------------------------------- */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    border: 1px solid #cfe8f3;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 30px 28px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.login-header img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+}
+
+.login-header h1 {
+    font-size: 20px;
+    color: #0b6fa3;
+    margin-bottom: 4px;
+}
+
+.login-header p {
+    font-size: 13px;
+    color: #5a7184;
+}
+
+/* ---------------------------------------------------------------------
+   Form elements
+   --------------------------------------------------------------------- */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #b7d9e8;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fbfeff;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #0b7bb8;
+    background-color: #ffffff;
+}
+
+.field-error {
+    color: #c0392b;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0b7bb8;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #095e8f;
+}
+
+.btn:disabled {
+    background-color: #9dc7db;
+    cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------------------
+   Alerts / messages
+   --------------------------------------------------------------------- */
+.alert {
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.alert-error {
+    background-color: #fdecea;
+    border: 1px solid #f3c1bb;
+    color: #a8332a;
+}
+
+.alert-success {
+    background-color: #e7f7ee;
+    border: 1px solid #b6e3c9;
+    color: #1e7a46;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 12px;
+    color: #7a8fa1;
+}
+
+/* ---------------------------------------------------------------------
+   Simple top bar for logged-in stub/dashboard placeholder
+   --------------------------------------------------------------------- */
+.topbar {
+    background-color: #0b7bb8;
+    color: #ffffff;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar .brand {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.topbar .user-info {
+    font-size: 13px;
+}
+
+.topbar .user-info a {
+    color: #ffffff;
+    margin-left: 12px;
+    border: 1px solid #ffffff;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.topbar .user-info a:hover {
+    background-color: #ffffff;
+    color: #0b7bb8;
+    text-decoration: none;
+}
+
+.page-content {
+    padding: 24px;
+}
