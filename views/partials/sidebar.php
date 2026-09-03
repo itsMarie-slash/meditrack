@@ -33,6 +33,10 @@ function navItem(string $key, string $active, string $href, string $icon, string
         navItem('sms', $active, '/bhw/sms_broadcast.php', 'bi-chat-dots', 'SMS Broadcast');
         navItem('reports', $active, '/bhw/reports.php', 'bi-file-earmark-spreadsheet', 'Reports / Export');
         ?>
+        <?php if ($role === 'bhw'): ?>
+            <div class="nav-section-label">Administration</div>
+            <?php navItem('users', $active, '/bhw/users.php', 'bi-person-gear', 'User Accounts'); ?>
+        <?php endif; ?>
     <?php elseif ($role === 'ipho'): ?>
         <div class="nav-section-label">Overview</div>
         <?php
