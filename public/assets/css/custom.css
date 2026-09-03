@@ -1,0 +1,224 @@
+/* MediTrack - Barangay New Bulatukan Health Center
+   Custom styling on top of Bootstrap 5. Institutional look: white surfaces,
+   a single accent green, light neutral background - not a generic SaaS theme. */
+
+:root {
+  --mt-green: #1a6b52;
+  --mt-green-dark: #114a39;
+  --mt-green-light: #e6f2ee;
+  --mt-gold: #c99a2e;
+  --mt-red: #b3261e;
+  --mt-bg: #f4f6f5;
+  --mt-border: #dde3e1;
+  --mt-text: #263230;
+  --mt-text-muted: #667370;
+}
+
+body {
+  background-color: var(--mt-bg);
+  color: var(--mt-text);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 0.925rem;
+}
+
+/* ---------- Login page ---------- */
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--mt-green-dark) 0%, var(--mt-green) 45%, var(--mt-bg) 45%);
+}
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(17, 74, 57, 0.25);
+  overflow: hidden;
+}
+.login-card .login-header {
+  background: var(--mt-green-dark);
+  color: #fff;
+  padding: 1.75rem 1.5rem 1.25rem;
+  text-align: center;
+}
+.login-card .login-header .badge-seal {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--mt-green-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+.login-card .login-body {
+  padding: 1.75rem 1.75rem 2rem;
+}
+
+/* ---------- App shell ---------- */
+.app-topbar {
+  background: #fff;
+  border-bottom: 1px solid var(--mt-border);
+  padding: 0.55rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+.app-topbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  color: var(--mt-green-dark);
+}
+.app-topbar .brand .seal {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--mt-green);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.app-shell {
+  display: flex;
+  min-height: calc(100vh - 54px);
+}
+.app-sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid var(--mt-border);
+  padding: 1rem 0.6rem;
+}
+.app-sidebar .nav-section-label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--mt-text-muted);
+  padding: 0.6rem 0.7rem 0.3rem;
+}
+.app-sidebar .nav-link {
+  color: var(--mt-text);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  margin-bottom: 2px;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.app-sidebar .nav-link:hover {
+  background: var(--mt-green-light);
+}
+.app-sidebar .nav-link.active {
+  background: var(--mt-green);
+  color: #fff;
+  font-weight: 600;
+}
+.app-main {
+  flex: 1;
+  min-width: 0;
+  padding: 1.25rem 1.5rem 2.5rem;
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+.page-header h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--mt-green-dark);
+  margin: 0;
+}
+.page-header .page-subtitle {
+  color: var(--mt-text-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Cards / stats ---------- */
+.mt-card {
+  background: #fff;
+  border: 1px solid var(--mt-border);
+  border-radius: 8px;
+}
+.stat-tile {
+  background: #fff;
+  border: 1px solid var(--mt-border);
+  border-left: 4px solid var(--mt-green);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+.stat-tile.stat-warn { border-left-color: var(--mt-gold); }
+.stat-tile.stat-danger { border-left-color: var(--mt-red); }
+.stat-tile .stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--mt-green-dark);
+  line-height: 1.1;
+}
+.stat-tile .stat-label {
+  color: var(--mt-text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-status-scheduled { background: #e7edfb; color: #2545a8; }
+.badge-status-dispensed { background: #e2f4ea; color: #197a45; }
+.badge-status-not-dispensed { background: #fdecea; color: #a5301f; }
+.badge-status-missed { background: #f2eae0; color: #8a5a11; }
+
+.table thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--mt-text-muted);
+  border-bottom-width: 1px;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--mt-green);
+  border-color: var(--mt-green);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--mt-green-dark);
+  border-color: var(--mt-green-dark);
+}
+.btn-outline-primary {
+  color: var(--mt-green);
+  border-color: var(--mt-green);
+}
+.btn-outline-primary:hover {
+  background-color: var(--mt-green);
+  border-color: var(--mt-green);
+}
+a { color: var(--mt-green-dark); }
+
+.role-badge {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .app-shell { flex-direction: column; }
+  .app-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--mt-border); }
+}
