@@ -1,0 +1,14 @@
+# Backend (PHP)
+backend/vendor/
+backend/.env
+backend/.phpunit.cache/
+backend/.phpunit.result.cache
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log

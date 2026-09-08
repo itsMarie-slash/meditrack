@@ -28,4 +28,6 @@ INSERT INTO medicines (name, category, description, unit, stock_quantity, low_st
 INSERT INTO system_settings (setting_key, setting_value) VALUES
     ('default_low_stock_threshold', '20'),
     ('default_distribution_venue', 'Barangay New Bulatukan Health Center'),
+    ('default_time_slot', '9:00 AM - 12:00 PM'),
+    ('schedule_lead_days', '3'),
     ('sms_schedule_template', 'MediTrack: Your {medicine} pickup is on {date} at {time}, {venue}. Please arrive on time.');
