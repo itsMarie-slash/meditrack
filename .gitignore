@@ -4,6 +4,12 @@ backend/.env
 backend/.phpunit.cache/
 backend/.phpunit.result.cache
 
+# E2E tests (Node)
+tests/e2e/node_modules/
+tests/e2e/package-lock.json
+tests/e2e/test-results/
+tests/e2e/playwright-report/
+
 # OS/editor
 .DS_Store
 Thumbs.db

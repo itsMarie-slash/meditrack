@@ -11,7 +11,7 @@ use MediTrack\Config\Env;
  * Set SMS_DRY_RUN=true in .env to log messages instead of sending them —
  * useful in development before a Semaphore account/API key exists.
  */
-final class SmsService
+class SmsService
 {
     private const ENDPOINT = 'https://api.semaphore.co/api/v4/messages';
 

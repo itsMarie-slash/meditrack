@@ -6,7 +6,7 @@ namespace MediTrack\Repositories;
 
 use PDO;
 
-final class DistributionScheduleRepository
+class DistributionScheduleRepository
 {
     public function __construct(private readonly PDO $db)
     {

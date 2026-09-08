@@ -6,7 +6,7 @@ namespace MediTrack\Repositories;
 
 use PDO;
 
-final class SmsNotificationRepository
+class SmsNotificationRepository
 {
     public function __construct(private readonly PDO $db)
     {
