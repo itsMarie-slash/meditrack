@@ -33,6 +33,7 @@ export class DataTable {
 
   render(result) {
     const { items, total, per_page: perPage } = result;
+    this.lastItems = items || [];
     if (!items || items.length === 0) {
       this.container.innerHTML = `<div class="empty-state">${this.config.emptyMessage || 'No records found.'}</div>`;
       return;

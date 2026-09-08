@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediTrack — Sign In</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-card">
+      <h1>MediTrack</h1>
+      <p class="subtitle">Barangay New Bulatukan Health Center</p>
+      <form id="login-form">
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" autocomplete="username" required style="width:100%">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required style="width:100%">
+        </div>
+        <div id="login-error" class="field-error" role="alert" style="display:none;"></div>
+        <button type="submit" class="btn" id="login-submit">Sign In</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/config.js"></script>
+  <script type="module" src="js/pages/login.js"></script>
+</body>
+</html>

@@ -67,7 +67,7 @@ export async function initShell(activeKey, pageTitle) {
       // best-effort — still send the user back to login
     }
     showToast('Signed out.', 'success');
-    location.href = 'index.html';
+    location.href = '../index.html';
   });
 
   return { user, content: document.getElementById('page-content') };

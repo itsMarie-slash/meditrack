@@ -102,7 +102,7 @@ final class MedicineRepository
             'category' => $data['category'],
             'description' => $data['description'] ?? null,
             'unit' => $data['unit'],
-            'low_stock_threshold' => $data['low_stock_threshold'] ?? 20,
+            'low_stock_threshold' => self::normalizeThreshold($data['low_stock_threshold'] ?? null),
         ]);
         return (int) $this->db->lastInsertId();
     }
@@ -120,7 +120,7 @@ final class MedicineRepository
             'category' => $data['category'],
             'description' => $data['description'] ?? null,
             'unit' => $data['unit'],
-            'low_stock_threshold' => $data['low_stock_threshold'] ?? 20,
+            'low_stock_threshold' => self::normalizeThreshold($data['low_stock_threshold'] ?? null),
             'id' => $id,
         ]);
     }
@@ -129,6 +129,12 @@ final class MedicineRepository
     {
         $stmt = $this->db->prepare('UPDATE medicines SET is_active = 0 WHERE id = :id');
         $stmt->execute(['id' => $id]);
+    }
+
+    /** low_stock_threshold is NOT NULL; an empty form field must fall back to the default, not '' (see nullIfBlank in SeniorCitizenRepository for the same class of bug). */
+    private static function normalizeThreshold(mixed $value): int
+    {
+        return ($value === null || $value === '') ? 20 : (int) $value;
     }
 
     /**

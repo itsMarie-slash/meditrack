@@ -175,15 +175,24 @@ final class SeniorCitizenRepository
             'birthdate' => $data['birthdate'],
             'gender' => $data['gender'],
             'purok_id' => $data['purok_id'],
-            'address_detail' => $data['address_detail'] ?? null,
-            'latitude' => $data['latitude'] ?? null,
-            'longitude' => $data['longitude'] ?? null,
+            'address_detail' => self::nullIfBlank($data['address_detail'] ?? null),
+            'latitude' => self::nullIfBlank($data['latitude'] ?? null),
+            'longitude' => self::nullIfBlank($data['longitude'] ?? null),
             'mobile_number' => $data['mobile_number'],
-            'guardian_name' => $data['guardian_name'] ?? null,
-            'guardian_contact' => $data['guardian_contact'] ?? null,
+            'guardian_name' => self::nullIfBlank($data['guardian_name'] ?? null),
+            'guardian_contact' => self::nullIfBlank($data['guardian_contact'] ?? null),
             'medical_condition' => $data['medical_condition'],
-            'assigned_medicine_id' => $data['assigned_medicine_id'] ?? null,
-            'distribution_status' => $data['distribution_status'] ?? 'active',
+            'assigned_medicine_id' => self::nullIfBlank($data['assigned_medicine_id'] ?? null),
+            'distribution_status' => $data['distribution_status'] ?: 'active',
         ];
+    }
+
+    /**
+     * HTML <select>/<input> fields submit an empty string for "no value",
+     * which is invalid for nullable numeric/FK columns — normalize to null.
+     */
+    private static function nullIfBlank(mixed $value): mixed
+    {
+        return $value === '' ? null : $value;
     }
 }
