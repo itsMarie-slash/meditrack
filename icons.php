@@ -39,6 +39,8 @@ function icon(string $name): string
 
         'stethoscope' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><circle cx="6" cy="2" r="1"/><circle cx="14" cy="2" r="1"/><path d="M10 15v2a5 5 0 0 0 10 0v-1.5"/><circle cx="20" cy="14.5" r="2"/></svg>',
 
+        'logo' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><circle cx="6" cy="2" r="1"/><circle cx="14" cy="2" r="1"/><path d="M10 15v2a5 5 0 0 0 10 0v-1.5"/><circle cx="20" cy="14.5" r="2"/></svg>',
+
         'user' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>',
 
         'lock' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
